@@ -1,17 +1,14 @@
 
 import time
-
-class Contact:
-    def __init__(self, first_name, last_name, number):
-        self.fname = first_name
-        self.lname = last_name
-        self.nbr = number
+import file_ops as f
+import data as d 
 
 def create_contact():
     fname = input("Enter first name: ")
     lname = input("Enter last name: ")
     tretto = input("Enter number: ")
-    return Contact(fname, lname, tretto)
+    return d.Contact(fname, lname, tretto)
+
 
 
 menu = """
@@ -22,6 +19,7 @@ Choose one the alternatives below:
 4. Remove a contact
 4. Exit application
 """
+file_name = 'contacts.txt'
 contacts_list = []
 program = True
 
@@ -33,6 +31,7 @@ while program:
         c = create_contact()
         print(f'Contact {c.fname} {c.lname} with number {c.nbr} successfully created.')
         contacts_list.append(c)
+        f.write_to_file(c, file_name)
         time.sleep(2)
     elif choice == "3":
         for c in contacts_list:
