@@ -47,8 +47,6 @@ program = True
 if not f.file_is_empty(json_file):
     f.load_from_json(json_file, json_list, pb)
 
-print(pb.contacts_list)
-
     
 while program:
 

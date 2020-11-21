@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "fname": "John",
+    "lname": "Doe",
+    "nbr": "+34634523"
+  },
+  {
+    "fname": "Mary",
+    "lname": "Doe",
+    "nbr": "+7456456"
+  }
+]
