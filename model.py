@@ -1,6 +1,7 @@
 class Phonebook:
+
     def __init__(self, contacts_list):
-        self.list = contacts_list
+        self.contacts_list = contacts_list
 
 class Contact:
     def __init__(self, first_name, last_name, number):
